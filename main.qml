@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
+import "features"
 
 ApplicationWindow {
     id: window
@@ -49,6 +50,7 @@ ApplicationWindow {
         id: drawer
         width: window.width * 0.8
         height: window.height
+        visible: false
 
         Column {
             anchors.fill: parent
@@ -74,7 +76,10 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: "HomeForm.ui.qml"
+        initialItem: Onboarding {
+
+        }
+
         anchors.fill: parent
     }
 }
