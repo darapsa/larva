@@ -9,16 +9,59 @@ Page {
 
     Image {
         id: image
-        height: 100
+        anchors.bottom: onboardingText1.top
+        anchors.bottomMargin: 32
         anchors.top: parent.top
         anchors.topMargin: 32
         anchors.right: parent.right
         anchors.rightMargin: 64
         anchors.left: parent.left
         anchors.leftMargin: 64
-        anchors.verticalCenter: parent.verticalCenter
         source: "../components/images/onboarding-1.png"
         fillMode: Image.PreserveAspectFit
+    }
+    Text {
+        id: onboardingText1
+        text: qsTr("Achieve more today, chill tomorrow.")
+        anchors.bottom: registerButton.top
+        anchors.bottomMargin: 16
+        wrapMode: Text.WordWrap
+        anchors.right: parent.right
+        anchors.rightMargin: 16
+        anchors.left: parent.left
+        anchors.leftMargin: 16
+        font.pointSize: 24
+        font.family: "Work Sans"
+        font.weight: Font.Medium
+    }
+    RoundButton {
+        id: registerButton
+        text: qsTr("Get started")
+        hoverEnabled: false
+        highlighted: true
+        anchors.right: parent.right
+        anchors.rightMargin: 8
+        anchors.left: parent.left
+        anchors.leftMargin: 8
+        anchors.bottom: loginButton.top
+        anchors.bottomMargin: 8
+        font.capitalization: Font.MixedCase
+        font.family: "Work Sans"
+    }
+
+    RoundButton {
+        id: loginButton
+        flat: true
+        highlighted: false
+        Material.foreground: Material.primary
+        text: qsTr("Log in")
+        anchors.right: parent.right
+        anchors.rightMargin: 8
+        anchors.left: parent.left
+        anchors.leftMargin: 8
+        anchors.bottom: disclaimer.top
+        anchors.bottomMargin: 16
+        font.capitalization: Font.MixedCase
     }
 
     Text {
