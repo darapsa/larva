@@ -10,6 +10,7 @@
 *.dylib
 
 # Qt-es
+*.cpp
 object_script.*.Release
 object_script.*.Debug
 *_plugin_import.cpp
@@ -28,6 +29,8 @@ ui_*.h
 *.jsc
 Makefile*
 *build-*
+*.pro
+*.conf
 
 # Qt unit tests
 target_wrapper.*
@@ -41,3 +44,9 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database 
+compile_commands.json
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
