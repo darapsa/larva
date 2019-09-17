@@ -7,11 +7,35 @@ Page {
     id: page
     title: qsTr("Onboarding")
 
+    property alias registerButton: registerButton
+    property alias loginButton: loginButton
+
+    Item {
+        id: toolBarLayout
+        height: 56
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+
+        Image {
+            width: 100
+            height: 24
+            fillMode: Image.PreserveAspectFit
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            source: "../components/images/kelakon-logo.png"
+        }
+    }
+
     Image {
-        id: image
+        id: onboardingImage
         anchors.bottom: onboardingText1.top
         anchors.bottomMargin: 32
-        anchors.top: parent.top
+        anchors.top: toolBarLayout.bottom
         anchors.topMargin: 32
         anchors.right: parent.right
         anchors.rightMargin: 64
@@ -51,6 +75,7 @@ Page {
 
     RoundButton {
         id: loginButton
+        y: 406
         flat: true
         highlighted: false
         Material.foreground: Material.primary
@@ -60,13 +85,14 @@ Page {
         anchors.left: parent.left
         anchors.leftMargin: 8
         anchors.bottom: disclaimer.top
-        anchors.bottomMargin: 16
+        anchors.bottomMargin: 8
         font.capitalization: Font.MixedCase
+        font.family: "Work Sans"
     }
 
     Text {
         id: disclaimer
-        color: "#fa000000"
+        color: "#8a000000"
         text: qsTr("By creating an account you agree to our Terms of Use and Privacy Policy.")
         horizontalAlignment: Text.AlignHCenter
         anchors.right: parent.right
@@ -74,11 +100,11 @@ Page {
         anchors.left: parent.left
         anchors.leftMargin: 16
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 16
+        anchors.bottomMargin: 8
         verticalAlignment: Text.AlignVCenter
         elide: Text.ElideMiddle
         wrapMode: Text.WordWrap
-        font.pixelSize: 12
+        font.pixelSize: 10
         font.family: "Work Sans"
         font.weight: Font.Normal
     }
