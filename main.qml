@@ -12,6 +12,7 @@ ApplicationWindow {
     title: {
         text: qsTr("kelakon")
     }
+    /*
     header:
     ToolBar {
         Material.elevation: 0
@@ -45,6 +46,7 @@ ApplicationWindow {
             }
         }
     }
+    */
 
     Drawer {
         id: drawer
