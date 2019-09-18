@@ -7,6 +7,8 @@ Page {
     id: page
     title: qsTr("Log in")
 
+    property alias continueButton: continueButton
+
     Text {
         id: pageTitle
         text: stackView.currentItem.title
@@ -45,8 +47,8 @@ Page {
         anchors.rightMargin: 0
         anchors.left: parent.left
         anchors.leftMargin: 0
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
+        anchors.bottom: continueLayout.top
+        anchors.bottomMargin: 16
         spacing: 8
         height: 56
 
@@ -74,6 +76,55 @@ Page {
             font.pointSize: 16
             font.family: "Work Sans"
             color: "#000000"
+        }
+    }
+    RowLayout {
+        id: continueLayout
+        height: 80
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+
+        Text {
+            id: disclaimer
+            text: qsTr("By continuing, you are agree to our Terms of Use and Privacy Policy.")
+            Layout.rightMargin: 16
+            Layout.leftMargin: 16
+            font.family: "Roboto"
+            font.pointSize: 12
+            color: "#FA000000"
+            wrapMode: Text.WordWrap
+            verticalAlignment: Text.AlignVCenter
+            rightPadding: 0
+            leftPadding: 0
+            Layout.alignment: Qt.AlignVCenter
+            Layout.fillWidth: true
+        }
+
+        RoundButton {
+            id: continueButton
+            width: 72
+            height: 72
+            Layout.preferredHeight: 64
+            Layout.preferredWidth: 64
+            Layout.minimumHeight: 64
+            Layout.minimumWidth: 64
+            Layout.rightMargin: 16
+            Layout.leftMargin: 16
+            flat: false
+            rightPadding: 0
+            leftPadding: 0
+            bottomPadding: 0
+            topPadding: 0
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Material.background: Material.primary
+            display: AbstractButton.IconOnly
+            icon.name: "arrow-forward-icon"
+            icon.source: "../components/icons/arrow-forward-24px.svg"
+            highlighted: true
         }
     }
 }

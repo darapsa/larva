@@ -12,10 +12,9 @@ ApplicationWindow {
     title: {
         text: qsTr("kelakon")
     }
-    /*
     header:
     ToolBar {
-        Material.elevation: 0
+
         background: Rectangle {
         color: "#FAFFFFFF"
         }
@@ -46,7 +45,7 @@ ApplicationWindow {
             }
         }
     }
-    */
+
 
     Drawer {
         id: drawer
@@ -75,7 +74,6 @@ ApplicationWindow {
             }
         }
     }
-
     StackView {
         id: stackView
         initialItem: Onboarding {
@@ -83,5 +81,7 @@ ApplicationWindow {
         }
 
         anchors.fill: parent
+
+
     }
 }
