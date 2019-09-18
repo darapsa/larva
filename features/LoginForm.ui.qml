@@ -11,7 +11,7 @@ Page {
 
     Text {
         id: pageTitle
-        text: stackView.currentItem.title
+        text: pageView.currentItem.title
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.WordWrap
         anchors.right: parent.right
