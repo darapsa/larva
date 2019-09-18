@@ -18,8 +18,6 @@ LoginForm {
                     onClicked: {
                         if (stackView.depth > 1) {
                             stackView.pop()
-                        } else {
-                            drawer.open()
                         }
                     }
                 }
