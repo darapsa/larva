@@ -86,29 +86,10 @@ Page {
         anchors.rightMargin: 8
         anchors.left: parent.left
         anchors.leftMargin: 8
-        anchors.bottom: disclaimer.top
-        anchors.bottomMargin: 8
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 16
         font.capitalization: Font.MixedCase
         font.family: "Work Sans"
-    }
-
-    Text {
-        id: disclaimer
-        color: "#8a000000"
-        text: qsTr("By creating an account you agree to our Terms of Use and Privacy Policy.")
-        horizontalAlignment: Text.AlignHCenter
-        anchors.right: parent.right
-        anchors.rightMargin: 16
-        anchors.left: parent.left
-        anchors.leftMargin: 16
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 8
-        verticalAlignment: Text.AlignVCenter
-        elide: Text.ElideMiddle
-        wrapMode: Text.WordWrap
-        font.pixelSize: 10
-        font.family: "Work Sans"
-        font.weight: Font.Normal
     }
 }
 
