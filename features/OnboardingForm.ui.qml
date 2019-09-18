@@ -7,6 +7,7 @@ Page {
     id: page
     title: qsTr("Onboarding")
 
+    property alias logoImage: logoImage
     property alias registerButton: registerButton
     property alias loginButton: loginButton
 
@@ -19,6 +20,7 @@ Page {
         anchors.leftMargin: 0
 
         Image {
+            id: logoImage
             width: 100
             height: 24
             fillMode: Image.PreserveAspectFit
