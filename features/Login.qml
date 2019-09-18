@@ -11,8 +11,8 @@ LoginForm {
             }
             RowLayout {
                 ToolButton {
-                    id: toolButton
-                    icon.name: "back-button"
+                    id: backButton
+                    icon.name: "back-icon"
                     icon.source: "../components/icons/arrow-back-24px.svg"
                     highlighted: true
                     onClicked: {
