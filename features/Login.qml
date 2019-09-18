@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.12
 LoginForm {
 
         continueButton.onClicked: {
-                            stackView.push("EnterPasswordForm.ui.qml")
+                            contentView.push("EnterPasswordForm.ui.qml")
                         }
 }
 

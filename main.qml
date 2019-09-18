@@ -25,8 +25,8 @@ ApplicationWindow {
                 icon.source: "components/icons/menu-24px.svg"
                 highlighted: true
                 onClicked: {
-                    if (stackView.depth > 1) {
-                        stackView.pop()
+                    if (contentView.depth > 1) {
+                        contentView.pop()
                     } else {
                         drawer.open()
                     }
@@ -34,7 +34,7 @@ ApplicationWindow {
             }
 
             Label {
-                text: stackView.currentItem.title
+                text: contentView.currentItem.title
                 font.family: "Work Sans"
                 font.weight: Font.Medium
                 font.pointSize: 20
@@ -60,7 +60,7 @@ ApplicationWindow {
                 text: qsTr("Page 1")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Page1Form.ui.qml")
+                    contentView.push("Page1Form.ui.qml")
                     drawer.close()
                 }
             }
@@ -68,14 +68,14 @@ ApplicationWindow {
                 text: qsTr("Page 2")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Page2Form.ui.qml")
+                    contentView.push("Page2Form.ui.qml")
                     drawer.close()
                 }
             }
         }
     }
     StackView {
-        id: stackView
+        id:  contentView
         initialItem: Onboarding {
 
         }
