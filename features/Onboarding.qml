@@ -3,8 +3,8 @@ import QtQuick 2.4
 OnboardingForm {
     objectName: "onboarding"
     loginButton.onClicked: pageView.push("Login.qml")
-    logoImage.source: "https://via.placeholder.com/100x24.png"
-    onboardingImage.source: "https://via.placeholder.com/600x600.png"
+    logoImage.source: "../components/images/kelakon-logo.png"
+    onboardingImage.source: "../components/images/onboarding-1.png"
     onboardingText1.text: qsTr("Get things done today, chill tomorrow.")
 }
 

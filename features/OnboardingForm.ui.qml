@@ -38,6 +38,7 @@ Page {
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 Layout.fillWidth: false
                 Layout.fillHeight: false
+                source: "https://via.placeholder.com/100x24.png"
             }
         }
     }
