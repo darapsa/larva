@@ -10,7 +10,7 @@ ApplicationWindow {
     width: 360
     height: 640
     title: {
-        text: qsTr("kelakon")
+        text: qsTr("Application name")
     }
 
 
