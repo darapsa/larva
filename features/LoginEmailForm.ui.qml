@@ -8,6 +8,7 @@ Page {
     title: qsTr("Log in")
 
     property alias continueButton: continueButton
+    property alias emailTextField: emailTextField
 
     Text {
         id: pageTitle
@@ -66,7 +67,7 @@ Page {
         }
 
         TextField {
-            id: emailForm
+            id: emailTextField
             topPadding: 16
             Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             Layout.rightMargin: 16
@@ -125,6 +126,7 @@ Page {
             icon.name: "arrow-forward-icon"
             icon.source: "../components/icons/arrow-forward-24px.svg"
             highlighted: true
+            enabled: false
         }
     }
 }
