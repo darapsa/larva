@@ -4,10 +4,12 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
 
 LoginEmailForm {
-    anchors.fill: parent
     emailTextField.onTextChanged: {
         if (!emailTextField.text || !continueButton.enabled)
             continueButton.enabled = !continueButton.enabled
+    }
+    continueButton.onClicked: {
+        contentView.push("LoginPassword.qml")
     }
 }
 
