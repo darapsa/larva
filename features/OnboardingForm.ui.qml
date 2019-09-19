@@ -48,17 +48,17 @@ Page {
     }
     Text {
         id: onboardingText1
-        text: qsTr("Achieve more today, chill tomorrow.")
+        text: qsTr("Get things done today, chill tomorrow.")
         anchors.bottom: registerButton.top
         anchors.bottomMargin: 16
         wrapMode: Text.WordWrap
         anchors.right: parent.right
-        anchors.rightMargin: 16
+        anchors.rightMargin: 72
         anchors.left: parent.left
         anchors.leftMargin: 16
         font.pointSize: 24
         font.family: "Work Sans"
-        font.weight: Font.Medium
+        font.weight: Font.Bold
     }
     RoundButton {
         id: registerButton

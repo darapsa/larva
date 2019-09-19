@@ -2,7 +2,7 @@ import QtQuick 2.4
 
 OnboardingForm {
     objectName: "onboarding"
-    loginButton.onClicked: pageView.push("LoginEmail.qml")
+    loginButton.onClicked: pageView.push("Login.qml")
 }
 
 /*##^##

@@ -11,7 +11,7 @@ Page {
 
     Text {
         id: pageTitle
-        text: pageView.currentItem.title
+        text: contentView.currentItem.title
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.WordWrap
         anchors.right: parent.right
@@ -27,7 +27,7 @@ Page {
     Text {
         id: pageInstruction
         color: "#000000"
-        text: qsTr("Get sh** done today, chill tomorrow.")
+        text: qsTr("Continue with your email.")
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.WordWrap
         anchors.right: parent.right
