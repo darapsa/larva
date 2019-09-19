@@ -9,6 +9,7 @@ LoginEmailForm {
             continueButton.enabled = !continueButton.enabled
     }
     continueButton.onClicked: {
+        /*User.emailAddress = emailTextField.text*/
         contentView.push("LoginPassword.qml")
     }
 }

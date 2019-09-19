@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
 
 LoginPasswordForm {
-    emailTextLabel.text: User.name
+    /*emailTextLabel.text: User.name*/
     passwordTextField.onTextChanged: {
         if (!passwordTextField.text || !continueButton.enabled)
             continueButton.enabled = !continueButton.enabled
