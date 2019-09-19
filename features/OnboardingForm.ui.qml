@@ -25,15 +25,15 @@ Page {
         anchors.leftMargin: 0
 
         background: Rectangle {
-            color: "#9AFAFAFA"
+            color: "#9AFFFFFF"
         }
         RowLayout {
             anchors.fill: parent
 
             Image {
                 id: logoImage
-                width: 100
-                height: 24
+                Layout.preferredHeight: 24
+                Layout.preferredWidth: 100
                 fillMode: Image.PreserveAspectFit
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
                 Layout.fillWidth: false
@@ -45,19 +45,14 @@ Page {
 
     StackView {
         id: contentView
-        anchors.top: toolBar.bottom
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.topMargin: 0
+        anchors.fill: parent
         z: -1
 
         Image {
             id: onboardingImage
             anchors.bottom: onboardingText1.top
             anchors.bottomMargin: 32
-            anchors.top: parent.top
-            anchors.topMargin: 32
+            anchors.topMargin: 32 + toolBar.height
             anchors.right: parent.right
             anchors.rightMargin: 64
             anchors.left: parent.left
@@ -96,7 +91,6 @@ Page {
 
         RoundButton {
             id: loginButton
-            y: 406
             flat: true
             highlighted: false
             Material.foreground: Material.primary
