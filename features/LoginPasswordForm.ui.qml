@@ -63,7 +63,7 @@ Page {
             sourceSize.width: 24
             Layout.leftMargin: 16
             fillMode: Image.PreserveAspectFit
-            source: "../assets/email-24px.svg"
+            source: "../../assets/email-24px.svg"
             antialiasing: true
         }
 
@@ -100,7 +100,7 @@ Page {
             sourceSize.width: 24
             Layout.leftMargin: 16
             fillMode: Image.PreserveAspectFit
-            source: "../components/icons/lock-24px.svg"
+            source: "../../assets/lock-24px.svg"
             antialiasing: true
         }
 
@@ -163,7 +163,7 @@ Page {
             Material.background: Material.primary
             display: AbstractButton.IconOnly
             icon.name: "arrow-forward-icon"
-            icon.source: "../components/icons/arrow-forward-24px.svg"
+            icon.source: "../../assets/arrow-forward-24px.svg"
             highlighted: true
             enabled: false
         }
