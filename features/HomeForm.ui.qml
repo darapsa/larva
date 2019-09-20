@@ -7,22 +7,10 @@ Page {
     id: page
     title: qsTr("Today")
 
-    RoundButton {
-        id: roundButton
-        width: 64
-        height: 64
-        display: AbstractButton.IconOnly
-        spacing: 8
-
-        padding: 16
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 8
-        anchors.right: parent.right
-        anchors.rightMargin: 8
-        highlighted: true
-
-        icon.name: "add-icon"
-        icon.source: "/assets/add-24px.svg"
+    Label {
+        text: qsTr("this is today")
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
     }
 }
 
