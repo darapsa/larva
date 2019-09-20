@@ -62,7 +62,7 @@ Page {
             sourceSize.width: 24
             Layout.leftMargin: 16
             fillMode: Image.PreserveAspectFit
-            source: "../components/icons/email-24px.svg"
+            source: "../../assets/email-24px.svg"
             antialiasing: true
         }
 
