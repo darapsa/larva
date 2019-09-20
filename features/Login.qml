@@ -14,7 +14,7 @@ Page {
             ToolButton {
                 id: toolButton
                 icon.name: "back-button"
-                icon.source: "../components/icons/arrow-back-24px.svg"
+                icon.source: "../../assets/arrow-back-24px.svg"
                 highlighted: true
                 onClicked: {
                     if (pageView.depth > 1) {
