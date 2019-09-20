@@ -8,9 +8,9 @@ Page {
     title: qsTr("Today")
 
     Label {
-        text: qsTr("this is today")
-        anchors.horizontalCenter: parent.horizontalCenter
+        text: qsTr("Load `contentView` here")
         anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
     }
 }
 
