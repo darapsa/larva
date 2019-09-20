@@ -9,6 +9,7 @@ Page {
 
     property alias emailTextLabel: emailTextLabel
     property alias passwordTextField: passwordTextField
+    property alias continueButton: continueButton
 
     Text {
         id: pageTitle
@@ -62,7 +63,7 @@ Page {
             sourceSize.width: 24
             Layout.leftMargin: 16
             fillMode: Image.PreserveAspectFit
-            source: "../assets/email-24px.svg"
+            source: "../../assets/email-24px.svg"
             antialiasing: true
         }
 
@@ -85,8 +86,8 @@ Page {
         anchors.rightMargin: 0
         anchors.left: parent.left
         anchors.leftMargin: 0
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
+        anchors.bottom: continueLayout.top
+        anchors.bottomMargin: 16
         spacing: 8
         height: 56
 
@@ -99,7 +100,7 @@ Page {
             sourceSize.width: 24
             Layout.leftMargin: 16
             fillMode: Image.PreserveAspectFit
-            source: "../components/icons/lock-24px.svg"
+            source: "../../assets/lock-24px.svg"
             antialiasing: true
         }
 
@@ -120,7 +121,6 @@ Page {
 
     RowLayout {
         id: continueLayout
-        height: 80
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
         anchors.right: parent.right
@@ -146,14 +146,12 @@ Page {
 
         RoundButton {
             id: continueButton
-            width: 72
-            height: 72
             Layout.preferredHeight: 64
             Layout.preferredWidth: 64
             Layout.minimumHeight: 64
             Layout.minimumWidth: 64
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
+            Layout.rightMargin: 0
+            Layout.leftMargin: 0
             flat: false
             rightPadding: 0
             leftPadding: 0
@@ -163,11 +161,16 @@ Page {
             Material.background: Material.primary
             display: AbstractButton.IconOnly
             icon.name: "arrow-forward-icon"
-            icon.source: "../components/icons/arrow-forward-24px.svg"
+            icon.source: "../../assets/arrow-forward-24px.svg"
             highlighted: true
             enabled: false
         }
     }
 }
 
+/*##^##
+Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+##^##*/
 
