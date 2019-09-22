@@ -6,6 +6,9 @@ import QtQuick.Layouts 1.12
 Page {
     id: page
     title: qsTr("Profile")
+    background: Rectangle {
+        color: "#FFFFFF"
+    }
 
     property alias usernameLabel: usernameLabel
     property alias fullnameLabel: fullnameLabel
@@ -122,48 +125,45 @@ Page {
         }
     }
 
-    RowLayout {
-        id: profileSettingsLayout
+    ItemDelegate {
+        id: profileSettings
         height: 56
-        anchors.bottom: profileLogoutLayout.top
-        anchors.bottomMargin: 0
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width
-        spacing: 8
-
-        Label {
-            id: profileSettingsLabel
-            Layout.fillWidth: true
-            text: qsTr("Settings")
-            font.weight: Font.Medium
-            Layout.rightMargin: 16
-            Layout.leftMargin: 24
-            verticalAlignment: Text.AlignVCenter
-            font.family: "Work Sans"
-            font.pointSize: 16
-        }
+        anchors.bottom: profileLogout.top
+        anchors.bottomMargin: 8
+        Layout.fillWidth: true
+        text: qsTr("Settings")
+        display: AbstractButton.TextOnly
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        font.weight: Font.Medium
+        font.family: "Work Sans"
+        font.pointSize: 16
     }
-    RowLayout {
-        id: profileLogoutLayout
+    ItemDelegate {
+        id: profileLogout
         height: 56
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 0
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width
-        spacing: 8
-
-        Label {
-            id: profileLogoutLabel
-            Layout.fillWidth: true
+        anchors.bottomMargin: 8
+        Layout.fillWidth: true
+        Text {
             text: qsTr("Log out")
-            font.weight: Font.Medium
-            Layout.rightMargin: 16
-            Layout.leftMargin: 24
+            anchors.left: parent.left
+            anchors.leftMargin: 16
+            anchors.verticalCenter: parent.verticalCenter
             verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WordWrap
+            font.weight: Font.Medium
             font.family: "Work Sans"
             font.pointSize: 16
             color: "#f44336"
         }
+        display: AbstractButton.TextOnly
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
     }
 }
 
