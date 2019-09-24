@@ -1,16 +1,18 @@
 <RCC>
-	<qresource prefix="/">
-		<file>components/icons/add-24px.svg</file>
-		<file>components/icons/arrow-back-24px.svg</file>
-		<file>components/icons/arrow-forward-24px.svg</file>
-		<file>components/icons/attachment-24px.svg</file>
-		<file>components/icons/check-box-outline-24px.svg</file>
-		<file>components/icons/chevron-right-24px.svg</file>
-		<file>components/icons/email-24px.svg</file>
-		<file>components/icons/lock-24px.svg</file>
-		<file>components/icons/menu-24px.svg</file>
-		<file>components/icons/photo_camera_24px.svg</file>
-		<file>components/icons/profile-24px.svg</file>
-		<file>components/icons/user-24px.svg</file>
-	</qresource>
+    <qresource prefix="/">
+        <file>components/icons/add-24px.svg</file>
+        <file>components/icons/arrow-back-24px.svg</file>
+        <file>components/icons/arrow-forward-24px.svg</file>
+        <file>components/icons/attachment-24px.svg</file>
+        <file>components/icons/check-box-outline-24px.svg</file>
+        <file>components/icons/chevron-right-24px.svg</file>
+        <file>components/icons/email-24px.svg</file>
+        <file>components/icons/lock-24px.svg</file>
+        <file>components/icons/menu-24px.svg</file>
+        <file>components/icons/photo_camera_24px.svg</file>
+        <file>components/icons/profile-24px.svg</file>
+        <file>components/icons/user-24px.svg</file>
+        <file>components/icons/notes-24px.svg</file>
+        <file>components/icons/more-vert-24px.svg</file>
+    </qresource>
 </RCC>
