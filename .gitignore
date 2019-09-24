@@ -31,7 +31,6 @@ Makefile*
 *build-*
 *.pro
 *.conf
-*.qrc
 
 # Qt unit tests
 target_wrapper.*
@@ -53,5 +52,4 @@ compile_commands.json
 *creator.user*
 
 # Assets
-*.svg
 *.png

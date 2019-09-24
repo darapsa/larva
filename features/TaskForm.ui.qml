@@ -76,7 +76,7 @@ GridLayout {
                 sourceSize.height: 24
                 sourceSize.width: 24
                 Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                source: "/assets/chevron-right-24px.svg"
+                source: "/components/icons/chevron-right-24px.svg"
             }
         }
     }

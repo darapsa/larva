@@ -5,7 +5,6 @@ import QtQuick.Layouts 1.12
 
 Page {
     property alias menuButton: menuButton
-    property alias titleLabel: titleLabel
     property alias profileButton: profileButton
     property alias contentView: contentView
 
@@ -19,10 +18,11 @@ Page {
             ToolButton {
                 id: menuButton
                 icon.name: "menu-button"
+		icon.source: "/components/icons/menu-24px.svg"
                 highlighted: true
             }
             Label {
-                id: titleLabel
+                text: contentView.currentItem.title
                 Layout.leftMargin: 16
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
@@ -36,6 +36,7 @@ Page {
             ToolButton {
                 id: profileButton
                 icon.name: "profile-button"
+		icon.source: "/components/icons/profile-24px.svg"
                 highlighted: true
             }
         }

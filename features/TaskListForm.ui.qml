@@ -32,7 +32,7 @@ Page {
         anchors.right: parent.right
         anchors.rightMargin: 8
         highlighted: true
-        icon.source: "../assets/add-24px.svg"
+        icon.source: "/components/icons/add-24px.svg"
         height: 64
         width: 64
     }

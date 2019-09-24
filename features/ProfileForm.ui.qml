@@ -42,7 +42,7 @@ Page {
             Layout.leftMargin: 16
             Layout.alignment: Qt.AlignVCenter
             fillMode: Image.PreserveAspectFit
-            source: "../../assets/profile-24px.svg"
+            source: "/components/icons/profile-24px.svg"
             antialiasing: true
         }
 
@@ -75,7 +75,7 @@ Page {
             Layout.leftMargin: 16
             Layout.alignment: Qt.AlignVCenter
             fillMode: Image.PreserveAspectFit
-            source: "../../assets/user-24px.svg"
+            source: "/components/icons/user-24px.svg"
             antialiasing: true
         }
 
@@ -109,7 +109,7 @@ Page {
             Layout.leftMargin: 16
             Layout.alignment: Qt.AlignVCenter
             fillMode: Image.PreserveAspectFit
-            source: "../../assets/email-24px.svg"
+            source: "/components/icons/email-24px.svg"
             antialiasing: true
         }
 

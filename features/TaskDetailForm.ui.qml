@@ -54,7 +54,7 @@ Page {
                 sourceSize.height: 24
                 sourceSize.width: 24
                 Layout.leftMargin: 16
-                source: "../../assets/attachment-24px.svg"
+                source: "/components/icons/attachment-24px.svg"
             }
             ItemDelegate {
                 id: itemDelegate
