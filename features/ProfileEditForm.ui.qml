@@ -18,10 +18,11 @@ Page {
         background: Rectangle {
             color: "#FAFFFFFF"
         }
-        id: toolBar
         RowLayout {
             anchors.fill: parent
             spacing: 0
+            id: toolBar
+
             ToolButton {
                 id: backButton
                 icon.name: "back-button"
@@ -62,7 +63,7 @@ Page {
         height: 80
         color: "#196d22e9"
         radius: 100
-        anchors.top: toolBar.bottom
+        anchors.top: parent.top
         anchors.topMargin: 32
         anchors.horizontalCenter: parent.horizontalCenter
         border.width: 0
@@ -70,9 +71,9 @@ Page {
     RowLayout {
         id: fullnameRowLayout
         height: 56
-        anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: avatarLayout.bottom
         anchors.topMargin: 32
+        anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width
 
         Image {
