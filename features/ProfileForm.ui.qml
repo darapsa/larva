@@ -6,9 +6,13 @@ import QtQuick.Layouts 1.12
 Page {
 	property alias backButton: backButton
 	property alias editToolButton: editToolButton
+	property alias saveProfileButton: saveProfileButton
 	property alias fullnameLabel: fullnameLabel
+	property alias fullnameTextField: fullnameTextField
 	property alias usernameLabel: usernameLabel
+	property alias usernameTextField: usernameTextField
 	property alias userEmailLabel: userEmailLabel
+	property alias userEmailTextField: userEmailTextField
 
 	header: ToolBar{
 		background: Rectangle {
@@ -45,6 +49,21 @@ Page {
 				flat: false
 				highlighted: true
 				Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+			}
+			Button {
+				id: saveProfileButton
+				text: qsTr("Save")
+				leftPadding: 8
+				rightPadding: 8
+				padding: 8
+				highlighted: true
+				font.weight: Font.Medium
+				display: AbstractButton.TextOnly
+				font.family: "Work Sans"
+				font.capitalization: Font.MixedCase
+				Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+				Layout.rightMargin: 8
+				visible: false
 			}
 		}
 	}
@@ -101,6 +120,18 @@ Page {
 					text: qsTr("Full name")
 					Layout.alignment: Qt.AlignVCenter
 				}
+
+				TextField {
+					id: fullnameTextField
+					Layout.rightMargin: 16
+					Layout.leftMargin: 24
+					font.pointSize: 16
+					font.family: "Work Sans"
+					Layout.fillWidth: true
+					placeholderText: qsTr("Full name")
+					Layout.alignment: Qt.AlignVCenter
+					visible: false
+				}
 			}
 			RowLayout {
 				id: usernameRowLayout
@@ -133,6 +164,18 @@ Page {
 					font.family: "Work Sans"
 					Layout.fillWidth: true
 					text: qsTr("Username")
+				}
+
+				TextField {
+					id: usernameTextField
+					Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+					Layout.rightMargin: 16
+					Layout.leftMargin: 24
+					font.pointSize: 16
+					font.family: "Work Sans"
+					Layout.fillWidth: true
+					placeholderText: qsTr("Username")
+					visible: false
 				}
 			}
 
@@ -167,6 +210,18 @@ Page {
 					verticalAlignment: Text.AlignVCenter
 					font.family: "Work Sans"
 					font.pointSize: 16
+				}
+
+				TextField {
+					id: userEmailTextField
+					Layout.fillWidth: true
+					placeholderText: qsTr("Your@email.com")
+					Layout.rightMargin: 16
+					Layout.leftMargin: 24
+					verticalAlignment: Text.AlignVCenter
+					font.family: "Work Sans"
+					font.pointSize: 16
+					visible: false
 				}
 			}
 
