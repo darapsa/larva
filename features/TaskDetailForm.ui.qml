@@ -40,7 +40,7 @@ Page {
 
     RowLayout {
         id: taskTitleLayout
-        height: 56
+        height: taskTitle.height + 16 + 5
         anchors.top: parent.top
         anchors.topMargin: 0
         anchors.right: parent.right
@@ -55,17 +55,22 @@ Page {
             Layout.leftMargin: 66
             Layout.fillWidth: true
             placeholderText: qsTr("Enter task title")
+            font.pixelSize: 16
+            font.family: "Google Sans"
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         }
     }
     RowLayout {
         id: taskDescriptionLayout
         width: parent.width
-        height: 56
+        height: taskDescription.height + 16 + 5
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: taskTitleLayout.bottom
         anchors.topMargin: 24
         Image {
             id: descriptionIcon
+            Layout.topMargin: 22
+            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
             sourceSize.height: 24
             sourceSize.width: 24
             Layout.leftMargin: 12
@@ -82,6 +87,7 @@ Page {
             Layout.leftMargin: 24
             Layout.fillWidth: true
             placeholderText: qsTr("Enter task description")
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         }
     }
     RowLayout {
