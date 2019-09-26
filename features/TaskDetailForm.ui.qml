@@ -40,7 +40,7 @@ Page {
 
     RowLayout {
         id: taskTitleLayout
-        height: taskTitle.height + 16 + 5
+        height: taskTitle.height + 16 + 3
         anchors.top: parent.top
         anchors.topMargin: 0
         anchors.right: parent.right
@@ -63,13 +63,13 @@ Page {
     RowLayout {
         id: taskDescriptionLayout
         width: parent.width
-        height: taskDescription.height + 16 + 5
+        height: taskDescription.height + 16 + 3
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: taskTitleLayout.bottom
         anchors.topMargin: 24
         Image {
             id: descriptionIcon
-            Layout.topMargin: 22
+            Layout.topMargin: 20
             Layout.alignment: Qt.AlignLeft | Qt.AlignTop
             sourceSize.height: 24
             sourceSize.width: 24
@@ -83,6 +83,8 @@ Page {
         }
         TextField {
             id: taskDescription
+            font.family: "Google Sans"
+            font.pixelSize: 16
             Layout.rightMargin: 16
             Layout.leftMargin: 24
             Layout.fillWidth: true
