@@ -14,5 +14,6 @@
         <file>components/icons/user-24px.svg</file>
         <file>components/icons/notes-24px.svg</file>
         <file>components/icons/more-vert-24px.svg</file>
+        <file>components/icons/folder-24px.svg</file>
     </qresource>
 </RCC>

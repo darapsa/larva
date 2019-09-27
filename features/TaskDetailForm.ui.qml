@@ -124,6 +124,36 @@ Page {
             Layout.fillWidth: true
         }
     }
+    RowLayout {
+        id: attachmentItemLayout
+        height: attachmentItem.height + 16
+        anchors.leftMargin: 0
+        anchors.top: attachmentLayout.bottom
+        anchors.topMargin: 0
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        ItemDelegate {
+            id: attachmentItem
+            height: 56
+            text: qsTr("Attached-file-name.file-format")
+            rightPadding: 16
+            leftPadding: 161
+            bottomPadding: 16
+            topPadding: 16
+            highlighted: false
+            font.weight: Font.Medium
+            font.pixelSize: 14
+            font.family: "Work Sans"
+            Layout.rightMargin: 16
+            Layout.leftMargin: 66
+            Layout.fillWidth: true
+            background: Rectangle {
+                color: "#D6C3F8"
+                radius: 8
+            }
+        }
+    }
 }
 
 /*##^##
