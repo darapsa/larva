@@ -35,31 +35,6 @@ Page {
             }
         }
     }
-
-    StackView {
-        id: contentView
-        anchors.fill: parent
-
-        TaskBriefForm {
-            id: taskBriefForm
-            anchors.top: parent.top
-            anchors.topMargin: 0
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-        }
-
-        TaskHistoryForm {
-            id: taskHistoryForm
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.top: taskBriefForm.bottom
-            anchors.topMargin: 0
-        }
-    }
 }
 
 /*##^##
