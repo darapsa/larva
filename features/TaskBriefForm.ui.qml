@@ -4,7 +4,8 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
 
 Page {
-    id: page
+    id: taskBriefComponents
+    height: ticketSubjectLayout.height + ticketMetaLayout.height
     RowLayout {
         id: ticketSubjectLayout
         height: ticketSubject.height + 32
@@ -70,10 +71,3 @@ Page {
         }
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/
-

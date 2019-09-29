@@ -35,6 +35,7 @@ Page {
             }
         }
     }
+
     StackView {
         id: contentView
         anchors.fill: parent
@@ -48,12 +49,22 @@ Page {
             anchors.left: parent.left
             anchors.leftMargin: 0
         }
+
+        TaskHistoryForm {
+            id: taskHistoryForm
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+            anchors.top: taskBriefForm.bottom
+            anchors.topMargin: 0
+        }
     }
 }
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:8;anchors_x:43;anchors_y:73}
+    D{i:0;autoSize:true;height:480;width:640}D{i:9;anchors_x:0;anchors_y:183}
 }
 ##^##*/
 
