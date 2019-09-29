@@ -9,6 +9,11 @@ Page {
     background: Rectangle {
         color: "#eeeeee"
     }
+
+    property alias historyCreator: historyCreator
+    property alias ticketHistoryText: ticketHistoryText
+    property alias historyTimeStamp: historyTimeStamp
+
     RowLayout {
         anchors.fill: parent
         spacing: 8

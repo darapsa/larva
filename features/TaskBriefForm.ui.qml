@@ -6,6 +6,12 @@ import QtQuick.Layouts 1.12
 Page {
     id: taskBriefComponents
     height: ticketSubjectLayout.height + ticketMetaLayout.height
+    property alias ticketSubject: ticketSubject
+    property alias userAvatar: userAvatar
+    property alias ticketCreator: ticketCreator
+    property alias ticketCreatedText: ticketCreatedText
+    property alias ticketCreatedTimestamp: ticketCreatedTimestamp
+
     RowLayout {
         id: ticketSubjectLayout
         height: ticketSubject.height + 32
@@ -64,10 +70,10 @@ Page {
             width: ticketCreatedText.width
         }
         Text {
-            id: ticketCreated
+            id: ticketCreatedTimestamp
             text: qsTr("2017-07-25 14:05:30")
             Layout.rightMargin: 16
-            width: ticketCreated.width
+            width: ticketCreatedTimestamp.width
         }
     }
 }
