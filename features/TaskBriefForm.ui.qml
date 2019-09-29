@@ -23,6 +23,8 @@ Page {
         Label {
             id: ticketSubject
             text: qsTr("Ticket subject")
+            verticalAlignment: Text.AlignVCenter
+            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             Layout.rightMargin: 16
             Layout.fillWidth: true
             Layout.leftMargin: 16
@@ -31,11 +33,10 @@ Page {
             font.pixelSize: 20
         }
     }
-    RowLayout {
+    ColumnLayout {
         id: ticketMetaLayout
         anchors.top: ticketSubjectLayout.bottom
         anchors.topMargin: 0
-        height: userAvatar.height + 16
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.left: parent.left
@@ -43,12 +44,16 @@ Page {
         spacing: 8
         Rectangle {
             id: userAvatar
-            height: 24
-            width: 24
+            height: 32
+            width: 32
             radius: 8
+            Layout.topMargin: 8
+            Layout.preferredHeight: 32
+            Layout.preferredWidth: 32
+            Layout.minimumHeight: 32
+            Layout.minimumWidth: 32
             Layout.leftMargin: 16
             Image {
-                anchors.fill: parent
                 source: "https://via.placeholder.com/32x32.png"
                 fillMode: Image.PreserveAspectFit
             }
@@ -57,6 +62,10 @@ Page {
         Text {
             id: ticketCreator
             text: qsTr("Username")
+            Layout.fillHeight: true
+            Layout.rightMargin: 16
+            Layout.leftMargin: 16
+            Layout.fillWidth: true
             font.weight: Font.Medium
             width: ticketCreator.width
             font.family: "Work Sans"
@@ -67,13 +76,26 @@ Page {
         Text {
             id: ticketCreatedText
             text: qsTr("created this issue")
+            Layout.fillHeight: true
+            Layout.rightMargin: 16
+            Layout.leftMargin: 16
+            font.pixelSize: 14
+            font.family: "Work Sans"
+            Layout.fillWidth: true
             width: ticketCreatedText.width
         }
         Text {
             id: ticketCreatedTimestamp
             text: qsTr("2017-07-25 14:05:30")
+            Layout.bottomMargin: 16
+            Layout.fillHeight: true
+            Layout.leftMargin: 16
+            font.pixelSize: 12
+            font.family: "Work Sans"
+            Layout.fillWidth: true
             Layout.rightMargin: 16
             width: ticketCreatedTimestamp.width
+            color: "#8a000000"
         }
     }
 }

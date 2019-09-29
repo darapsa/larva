@@ -12,7 +12,7 @@ Page {
 
     property alias historyCreator: historyCreator
     property alias ticketHistoryText: ticketHistoryText
-    property alias historyTimeStamp: historyTimeStamp
+    property alias historyTimestamp: historyTimestamp
 
     RowLayout {
         anchors.fill: parent
