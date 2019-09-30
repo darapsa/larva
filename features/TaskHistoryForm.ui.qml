@@ -9,7 +9,7 @@ Page {
         color: "#eeeeee"
     }
     height: ticketDescriptionLayout.height
-    property alias creator: creator
+    property alias creatorText: creatorText
     property alias ticketDescription: ticketDescription
     property alias ticketDate: ticketDate
 
@@ -24,7 +24,7 @@ Page {
             Layout.topMargin: 8
             spacing: 8
             Text {
-                id: creator
+                id: creatorText
                 text: qsTr("Username")
                 Layout.rightMargin: 0
                 Layout.fillWidth: true
