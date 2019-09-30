@@ -46,28 +46,34 @@ Page {
         anchors.left: parent.left
         anchors.leftMargin: 0
         spacing: 8
-        Rectangle {
-            id: userAvatar
-            height: 32
-            width: 32
-            radius: 8
-            Layout.topMargin: 8
-            Layout.preferredHeight: 32
-            Layout.preferredWidth: 32
-            Layout.minimumHeight: 32
-            Layout.minimumWidth: 32
-            Layout.leftMargin: 16
-            Image {
-                source: "https://via.placeholder.com/32x32.png"
-                fillMode: Image.PreserveAspectFit
-            }
-        }
         RowLayout {
+            id: creatorInfo
+            spacing: 8
+            Layout.fillWidth: true
+            Rectangle {
+                id: userAvatar
+                height: 24
+                width: 24
+                radius: 8
+                Layout.bottomMargin: 8
+                Layout.topMargin: 8
+                Layout.preferredHeight: 24
+                Layout.preferredWidth: 24
+                Layout.minimumHeight: 24
+                Layout.minimumWidth: 24
+                Layout.leftMargin: 16
+                Image {
+                    width: 24
+                    anchors.verticalCenter: parent.verticalCenter
+                    source: "https://via.placeholder.com/32x32.png"
+                    fillMode: Image.PreserveAspectFit
+                }
+            }
             Text {
                 id: ticketCreator
                 text: qsTr("Username")
                 Layout.rightMargin: 0
-                Layout.leftMargin: 16
+                Layout.leftMargin: 0
                 Layout.fillWidth: false
                 font.weight: Font.Medium
                 font.family: "Work Sans"
@@ -78,14 +84,15 @@ Page {
             Text {
                 id: ticketCreatedText
                 text: qsTr("created this issue")
-                Layout.fillHeight: true
+                Layout.fillHeight: false
                 Layout.rightMargin: 16
                 Layout.leftMargin: 0
                 font.pixelSize: 14
                 font.family: "Work Sans"
-                Layout.fillWidth: false
+                Layout.fillWidth: true
             }
         }
+
         Text {
             id: ticketCreatedTimestamp
             text: qsTr("2017-07-25 14:05:30")

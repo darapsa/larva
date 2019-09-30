@@ -6,9 +6,6 @@ import QtQuick.Layouts 1.12
 Page {
     id: page
     title: qsTr("Task detail page")
-    background: Rectangle {
-        color: "#FFFFFF"
-    }
 
     property alias backButton: backButton
 
@@ -39,7 +36,7 @@ Page {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:9;anchors_x:0;anchors_y:183}
+    D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/
 
