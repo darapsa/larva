@@ -12,6 +12,10 @@ Page {
     property alias ticketCreatedText: ticketCreatedText
     property alias ticketCreatedTimestamp: ticketCreatedTimestamp
 
+    background: Rectangle {
+        color: "#FFFFFF"
+    }
+
     RowLayout {
         id: ticketSubjectLayout
         height: ticketSubject.height + 32
@@ -58,31 +62,29 @@ Page {
                 fillMode: Image.PreserveAspectFit
             }
         }
-
-        Text {
-            id: ticketCreator
-            text: qsTr("Username")
-            Layout.fillHeight: true
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
-            Layout.fillWidth: true
-            font.weight: Font.Medium
-            width: ticketCreator.width
-            font.family: "Work Sans"
-            verticalAlignment: Text.AlignVCenter
-            elide: Text.ElideRight
-            font.pixelSize: 14
-        }
-        Text {
-            id: ticketCreatedText
-            text: qsTr("created this issue")
-            Layout.fillHeight: true
-            Layout.rightMargin: 16
-            Layout.leftMargin: 16
-            font.pixelSize: 14
-            font.family: "Work Sans"
-            Layout.fillWidth: true
-            width: ticketCreatedText.width
+        RowLayout {
+            Text {
+                id: ticketCreator
+                text: qsTr("Username")
+                Layout.rightMargin: 0
+                Layout.leftMargin: 16
+                Layout.fillWidth: false
+                font.weight: Font.Medium
+                font.family: "Work Sans"
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+                font.pixelSize: 14
+            }
+            Text {
+                id: ticketCreatedText
+                text: qsTr("created this issue")
+                Layout.fillHeight: true
+                Layout.rightMargin: 16
+                Layout.leftMargin: 0
+                font.pixelSize: 14
+                font.family: "Work Sans"
+                Layout.fillWidth: false
+            }
         }
         Text {
             id: ticketCreatedTimestamp
