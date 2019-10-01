@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
+import QtGraphicalEffects 1.0
 
 Page {
     id: taskBriefComponents
@@ -40,41 +41,39 @@ Page {
     ColumnLayout {
         id: ticketMetaLayout
         anchors.top: ticketSubjectLayout.bottom
-        anchors.topMargin: 0
         anchors.right: parent.right
-        anchors.rightMargin: 0
         anchors.left: parent.left
-        anchors.leftMargin: 0
         spacing: 8
         RowLayout {
             id: creatorInfo
+            Layout.leftMargin: 16
+            Layout.topMargin: 8
             spacing: 8
             Layout.fillWidth: true
-            Rectangle {
+
+            Image {
                 id: userAvatar
-                height: 24
                 width: 24
-                radius: 8
-                Layout.bottomMargin: 8
-                Layout.topMargin: 8
-                Layout.preferredHeight: 24
-                Layout.preferredWidth: 24
-                Layout.minimumHeight: 24
-                Layout.minimumWidth: 24
-                Layout.leftMargin: 16
-                Image {
-                    width: 24
-                    anchors.verticalCenter: parent.verticalCenter
-                    source: "https://via.placeholder.com/32x32.png"
-                    fillMode: Image.PreserveAspectFit
+                height: 24
+                source: "https://via.placeholder.com/24x24.png"
+                fillMode: Image.PreserveAspectCrop
+                layer.enabled: true
+                layer.effect: OpacityMask {
+                    maskSource: userAvatarMask
                 }
+            }
+            Rectangle {
+                id: userAvatarMask
+                height: 24
+                color: "#000000"
+                width: 24
+                radius: 12
+                visible: false
             }
             Text {
                 id: ticketCreator
                 text: qsTr("Username")
-                Layout.rightMargin: 0
-                Layout.leftMargin: 0
-                Layout.fillWidth: false
+                Layout.leftMargin: 8
                 font.weight: Font.Medium
                 font.family: "Work Sans"
                 verticalAlignment: Text.AlignVCenter
@@ -84,9 +83,7 @@ Page {
             Text {
                 id: ticketCreatedText
                 text: qsTr("created this issue")
-                Layout.fillHeight: false
                 Layout.rightMargin: 16
-                Layout.leftMargin: 0
                 font.pixelSize: 14
                 font.family: "Work Sans"
                 Layout.fillWidth: true
