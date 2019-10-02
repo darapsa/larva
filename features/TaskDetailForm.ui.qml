@@ -32,6 +32,19 @@ Page {
             }
         }
     }
+    ListView {
+        id: listView
+        width: parent.width
+        height: parent.height
+        anchors.topMargin: 8
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        spacing: 8
+
+        ScrollBar.vertical: ScrollBar {}
+    }
 }
 
 /*##^##
