@@ -8,6 +8,8 @@ Page {
     title: qsTr("Task detail page")
 
     property alias backButton: backButton
+    property alias listView: listView
+    property alias ticketBriefForm: ticketBriefForm
 
     header: ToolBar {
         background: Rectangle {
@@ -32,19 +34,50 @@ Page {
             }
         }
     }
-    ListView {
-        id: listView
-        width: parent.width
-        height: parent.height
-        anchors.topMargin: 8
-        anchors.right: parent.right
-        anchors.rightMargin: 0
-        anchors.left: parent.left
-        anchors.leftMargin: 0
-        spacing: 8
+	StackView {
+		id: contentView
+		anchors.fill: parent
+		background: Rectangle {
+			color: "#FFFFFF"
+		}
 
-        ScrollBar.vertical: ScrollBar {}
-    }
+		TaskBriefForm {
+			id: ticketBriefForm
+			anchors.top: parent.top
+			anchors.topMargin: 0
+			anchors.right: parent.right
+			anchors.rightMargin: 0
+			anchors.left: parent.left
+			anchors.leftMargin: 0
+		}
+
+		Label {
+			id: separator
+			color: "#000000"
+			text: qsTr("Activities")
+			font.weight: Font.Medium
+			font.pixelSize: 16
+			font.family: "Work Sans"
+			anchors.left: parent.left
+			anchors.leftMargin: 16
+			anchors.top: ticketBriefForm.bottom
+			anchors.topMargin: 8
+		}
+
+		ListView {
+			id: listView
+			width: parent.width
+			height: parent.height
+			anchors.topMargin: 8
+			anchors.right: parent.right
+			anchors.rightMargin: 0
+			anchors.left: parent.left
+			anchors.leftMargin: 0
+			spacing: 8
+
+			ScrollBar.vertical: ScrollBar {}
+		}
+	}
 }
 
 /*##^##
