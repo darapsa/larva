@@ -5,9 +5,6 @@ import QtQuick.Layouts 1.12
 
 Page {
     id: page
-    background: Rectangle {
-        color: "#eeeeee"
-    }
     height: ticketDescriptionLayout.height
     property alias creatorText: creatorText
     property alias ticketDescription: ticketDescription

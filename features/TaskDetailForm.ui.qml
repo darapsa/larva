@@ -72,6 +72,11 @@ Page {
         }
         ListView {
             id: listView
+            Rectangle {
+                color: "#eeeeee"
+                z: -1
+                anchors.fill: parent
+            }
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 0
             anchors.top: separator.bottom
