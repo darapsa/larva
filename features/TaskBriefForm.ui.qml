@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-Page {
+Item {
     id: taskBriefComponents
     height: ticketSubjectLayout.height + ticketMetaLayout.height
     property alias ticketSubject: ticketSubject
@@ -12,10 +12,6 @@ Page {
     property alias ticketCreator: ticketCreator
     property alias ticketCreatedText: ticketCreatedText
     property alias ticketCreatedTimestamp: ticketCreatedTimestamp
-
-    background: Rectangle {
-        color: "#FFFFFF"
-    }
 
     RowLayout {
         id: ticketSubjectLayout
@@ -49,7 +45,6 @@ Page {
             Layout.leftMargin: 16
             Layout.topMargin: 8
             spacing: 8
-            Layout.fillWidth: true
 
             Image {
                 id: userAvatar
@@ -94,7 +89,7 @@ Page {
             id: ticketCreatedTimestamp
             text: qsTr("2017-07-25 14:05:30")
             Layout.bottomMargin: 16
-            Layout.fillHeight: true
+            Layout.fillHeight: false
             Layout.leftMargin: 16
             font.pixelSize: 12
             font.family: "Work Sans"

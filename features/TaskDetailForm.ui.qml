@@ -6,10 +6,13 @@ import QtQuick.Layouts 1.12
 Page {
     id: page
     title: qsTr("Task detail page")
+    background: Rectangle {
+        color: "#FFFFFF"
+    }
 
     property alias backButton: backButton
-    property alias listView: listView
     property alias ticketBriefForm: ticketBriefForm
+    property alias listView: listView
 
     header: ToolBar {
         background: Rectangle {
@@ -36,10 +39,12 @@ Page {
     }
     ScrollView {
         id: contentView
-        anchors.fill: parent
-        background: Rectangle {
-            color: "#FFFFFF"
-        }
+        anchors.right: parent.right
+        anchors.rightMargin: 0
+        anchors.left: parent.left
+        anchors.leftMargin: 0
+        anchors.top: parent.top
+        anchors.topMargin: 0
         TaskBriefForm {
             id: ticketBriefForm
             anchors.top: parent.top
@@ -72,18 +77,14 @@ Page {
         }
         ListView {
             id: listView
+            keyNavigationWraps: true
+            interactive: true
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
             anchors.leftMargin: 0
             anchors.top: separator.bottom
             anchors.topMargin: 0
-            Rectangle {
-                color: "#eeeeee"
-                z: -1
-                anchors.fill: parent
-            }
-            spacing: 0
         }
     }
 }
