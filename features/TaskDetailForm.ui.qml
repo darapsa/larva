@@ -39,6 +39,10 @@ Page {
     }
     ScrollView {
         id: contentView
+        clip: true
+        contentHeight: ticketBriefForm.height + separator.height + listView.height
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 0
         anchors.right: parent.right
         anchors.rightMargin: 0
         anchors.left: parent.left
@@ -78,7 +82,7 @@ Page {
         ListView {
             id: listView
             keyNavigationWraps: true
-            interactive: true
+            interactive: false
             anchors.right: parent.right
             anchors.rightMargin: 0
             anchors.left: parent.left
