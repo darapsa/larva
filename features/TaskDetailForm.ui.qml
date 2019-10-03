@@ -40,41 +40,48 @@ Page {
         background: Rectangle {
             color: "#FFFFFF"
         }
-
+        TaskBriefForm {
+            id: ticketBriefForm
+            anchors.top: parent.top
+            anchors.topMargin: 0
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+        }
+        RowLayout {
+            id: separator
+            height: separatorLabel.height + 32
+            anchors.top: ticketBriefForm.bottom
+            anchors.topMargin: 0
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+            Label {
+                id: separatorLabel
+                height: 20
+                color: "#000000"
+                text: qsTr("Activities")
+                Layout.leftMargin: 16
+                verticalAlignment: Text.AlignVCenter
+                font.weight: Font.Medium
+                font.pixelSize: 16
+                font.family: "Work Sans"
+            }
+        }
         ListView {
             id: listView
-            anchors.fill: parent
-            spacing: 8
-            TaskBriefForm {
-                id: ticketBriefForm
-                anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-            }
-            RowLayout {
-                id: separator
-                height: separatorLabel.height + 32
-                anchors.top: ticketBriefForm.bottom
-                anchors.topMargin: 0
-                anchors.right: parent.right
-                anchors.rightMargin: 0
-                anchors.left: parent.left
-                anchors.leftMargin: 0
-                Label {
-                    id: separatorLabel
-                    height: 20
-                    color: "#000000"
-                    text: qsTr("Activities")
-                    Layout.leftMargin: 16
-                    verticalAlignment: Text.AlignVCenter
-                    font.weight: Font.Medium
-                    font.pixelSize: 16
-                    font.family: "Work Sans"
-                }
-            }
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 0
+            anchors.top: separator.bottom
+            anchors.topMargin: 0
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+            spacing: 0
+
             ScrollBar.vertical: ScrollBar {}
         }
     }
@@ -82,7 +89,7 @@ Page {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}D{i:8;anchors_height:432;anchors_width:640}
+    D{i:0;autoSize:true;height:480;width:640}
 }
 ##^##*/
 
