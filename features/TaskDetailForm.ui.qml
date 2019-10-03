@@ -34,7 +34,7 @@ Page {
             }
         }
     }
-    StackView {
+    ScrollView {
         id: contentView
         anchors.fill: parent
         background: Rectangle {
@@ -72,22 +72,18 @@ Page {
         }
         ListView {
             id: listView
+            anchors.right: parent.right
+            anchors.rightMargin: 0
+            anchors.left: parent.left
+            anchors.leftMargin: 0
+            anchors.top: separator.bottom
+            anchors.topMargin: 0
             Rectangle {
                 color: "#eeeeee"
                 z: -1
                 anchors.fill: parent
             }
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 0
-            anchors.top: separator.bottom
-            anchors.topMargin: 0
-            anchors.right: parent.right
-            anchors.rightMargin: 0
-            anchors.left: parent.left
-            anchors.leftMargin: 0
             spacing: 0
-
-            ScrollBar.vertical: ScrollBar {}
         }
     }
 }
