@@ -4,8 +4,8 @@ import QtQuick.Controls.Material 2.15
 import QtQuick.Layouts 1.15
 
 Page {
-    property alias menuButton: menuButton
-    property alias profileButton: profileButton
+    //property alias menuButton: menuButton
+    //property alias profileButton: profileButton
     property alias contentView: contentView
 
     header: ToolBar {
@@ -15,12 +15,14 @@ Page {
         RowLayout {
             anchors.fill: parent
             spacing: 0
+	    /*
             ToolButton {
                 id: menuButton
                 icon.name: "menu-button"
 		icon.source: "/components/icons/menu-24px.svg"
                 highlighted: true
             }
+	    */
             Label {
                 text: contentView.currentItem.title
                 Layout.leftMargin: 16
@@ -33,12 +35,14 @@ Page {
                 color: "#000000"
                 Layout.fillWidth: true
             }
+	    /*
             ToolButton {
                 id: profileButton
                 icon.name: "profile-button"
 		icon.source: "/components/icons/profile-24px.svg"
                 highlighted: true
             }
+	    */
         }
     }
 
