@@ -42,6 +42,7 @@ Item {
 			lineHeight: 24
 			verticalAlignment: Text.AlignVCenter
 			font.family: robotoMonoBold.name
+			font.bold: true
 			font.pixelSize: 16
 			font.letterSpacing: 0.15
 		}
